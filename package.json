@@ -25,6 +25,8 @@
         "dev": "gulp"
     },
     "devDependencies": {
+        "gulp-clean-css": "^4.3.0",
+        "gulp-terser": "^2.1.0",
         "sass": "^1.89.0"
     },
     "dependencies": {
