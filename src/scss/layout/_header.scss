@@ -4,6 +4,17 @@
 .header {
     background-color: v.$verde;
 
+    @include m.tablet {
+        &.fijo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0.1rem 0.2rem 0.3rem #333;
+        }
+    }
+
     .contenido-header {
         padding: 2rem;
 
