@@ -27,7 +27,13 @@ function mostrarImagen(indice) {
     imagen.src = `src/img/gallery/full/${indice}.jpg`;
     imagen.alt = `Imagen galeria ${indice}`;
 
+    const cerrarNodalBtn = document.createElement("BUTTON");
+    cerrarNodalBtn.textContent = "X";
+    cerrarNodalBtn.classList.add("btn-cerrar");
+    cerrarNodalBtn.onclick = cerrarNodal;
+
     modal.appendChild(imagen);
+    modal.appendChild(cerrarNodalBtn);
 
     modal.onclick = cerrarNodal;
 

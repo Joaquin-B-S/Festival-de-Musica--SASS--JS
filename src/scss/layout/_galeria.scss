@@ -44,6 +44,20 @@
     }
 }
 
+.btn-cerrar {
+    width: 4rem;
+    height: 4rem;
+    background-color: v.$blanco;
+    color: v.$blanco;
+    border-radius: 50%;
+    border: none;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
