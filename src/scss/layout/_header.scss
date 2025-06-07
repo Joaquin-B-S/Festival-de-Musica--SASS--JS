@@ -47,7 +47,8 @@
         color: v.$blanco;
         font-size: 2.4rem;
 
-        &:hover {
+        &:hover,
+        &.activo {
             color: v.$amarillo;
         }
     }

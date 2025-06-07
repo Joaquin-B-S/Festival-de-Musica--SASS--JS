@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     navegacionFija();
     crearGaleria();
+    resaltarEnlace();
+    scrollNav();
 });
 
 function navegacionFija() {
@@ -65,4 +67,27 @@ function cerrarNodal() {
         const body = document.querySelector("body");
         body.classList.remove("overflow-hidden");
     }, 500);
+}
+
+function resaltarEnlace() {
+    document.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".navegacion-principal a");
+        let actual = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                actual = section.id;
+            }
+        });
+        navLinks.forEach((link) => {
+            link.classList.remove("activo");
+            if (link.getAttribute("href") === `#${actual}`) {
+                link.classList.add("activo");
+            }
+        });
+    });
 }
